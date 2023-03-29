@@ -1,0 +1,49 @@
+##download XamPP
+##Start Apache module, port number 80
+##create new php files in "C:\xampp\htdocs"
+##typein "localhost/'filename'.php" on Chrome browser
+
+#tag.php
+<?php phpinfo(); ?>
+
+#tag1.php
+<B>
+<?php print"Hello!"; ?>
+</B>
+
+#tag2.php
+<HTML>
+<HEAD>
+<TITLE>PHP TEST</TITLE>
+</HEAD>
+<BODY>
+<?php print"Hello!"; ?>
+</BODY>
+</HTML>
+
+#tag3.php
+<HTML><HEAD>
+    <TITLE>PHP TEST</TITLE></HEAD>
+    <BODY>
+        <B><?php print"Hello!"; ?></B>
+        <?php print"<BR>"; print"<BR>"; ?>
+        <?php print"Is this the first line?"; ?>
+        <?php print"I want to go home."; ?>
+</BODY></HTML>
+
+#define.php
+<?php define("HELLO","GOODBYE!");
+print HELLO;?>
+
+#file.php
+<HTML><HEAD>
+    <TITLE>PHP TEST</TITLE></HEAD>
+    <BOY>
+    <?php print "The name of this file is ";print __FILE__;print".<BR>";?>
+    </BODY></HTML>
+    
+#line.php
+<HTML><HEAD><TITLE>PHP TEST</TITLE></HEAD>
+<BODY>
+    <?php print"This is ";print __LINE__; print"th line.<BR>"; ?>
+</BODY></HTML>
