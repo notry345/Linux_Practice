@@ -47,3 +47,11 @@ print HELLO;?>
 <BODY>
     <?php print"This is ";print __LINE__; print"th line.<BR>"; ?>
 </BODY></HTML>
+
+#version.php
+<HTML><HEAD><TITLE>PHP TEST</TITLE></HEAD>
+<BODY>
+    <?php print "The version of PHP is ";print PHP_VERSION;
+     print".<BR>";?>
+</BODY>
+</HTML>
