@@ -55,3 +55,16 @@ print HELLO;?>
      print".<BR>";?>
 </BODY>
 </HTML>
+
+#print.php
+<?php $data = "Hello!";
+print $data ?>
+
+#array.php
+<?php $week=["Mon ","Tue ","Wed ","Thu ","Fri"];
+print $week[0];
+print $week[1];
+print $week[2];
+print $week[3];
+print $week[4]; ?>
+
