@@ -1,0 +1,51 @@
+#printHello.php
+<?php
+$data = "Hello!";
+print $data
+?>
+
+#Array2.php
+<HTML><HEAD> <TITLE>PHP TEST</TITLE></HEAD>
+<BODY>
+    <?php
+    $week[] = "Monday";$week[] = "Tuesday";$week[] = "Wednesday";
+    print $week[0];
+    print"<BR>";
+    print $week[1]; print"<BR>";
+    print $week[2];?>
+    </BODY>
+</HTML>
+
+#Array3.php
+<?php
+$week = explode(",","Mon,Tue,Wed,Thu,Fri,Sat,Sun");
+print $week[3];
+?>
+
+#Asoarray.php
+<?php
+$member["name"] = " ChurSu";
+print $member["name"];
+?>
+
+#Asoarray2.php
+<?php
+$member["name"] = " ChurSu";
+$member["age"] = 20;
+$member["height"] = 170;
+print $member["name"];
+print "<BR>";
+print $member["age"];
+print "<BR>";
+print $member["tall"];
+?>
+
+#Asoarray3.php
+<?php
+$member = array("name"=>" ChurSu","age"=>20,"tall"=>170);
+print $member["name"];
+print "<BR>";
+print $member["age"];
+print "<BR>";
+print $member["tall"];
+?>
