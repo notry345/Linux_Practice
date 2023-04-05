@@ -1,6 +1,6 @@
 ##download XamPP
 ##Start Apache module, port number 80
-##create new php files in "C:\xampp\htdocs"
+##create new php files in "C:/xampp/htdocs"
 ##typein "localhost/'filename'.php" on Chrome browser
 
 #tag.php
