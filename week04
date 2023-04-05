@@ -110,3 +110,56 @@ var_dump($data);
 print"</PRE>";
 ?>
 
+#if.php
+<?php
+$username="user";
+$password="pass";
+$db_data["username"]="user";
+$db_data["password"]="pass";
+if($db_data["username"]==$username && $db_data["password"]==$password)
+{print"회원 페이지입니다.";}
+else{print"로그인에 실패하였습니다.";}
+
+#switch.php
+<?php
+$type="form";
+switch($type){
+    case"form":print"등록 폼입니다.";break;
+    case"confirm":print"확인 화면입니다.";break;
+    case"exec":print"등록처리를 실행중";break;
+    default:print"화면이 없습니다.";}
+    ?>
+#while.php
+<?php
+if($dirhandle=opendir('.')){
+    while(false !==($filename=readdir($dirhandle))){
+        print $filename."<BR>";}
+        closedir($dirhandle);
+    }
+    ?>
+
+#for.php
+<?php
+$PrefectureList=array("서울특별시","부산광역시","대구광역시","울산광역시
+","광주광역시","대전광역시","인천광역시","세종특별자치시","경기도","강원도","충
+청북도","충청남도","경상북도","경상남도","전라북도","전라남도","제주특별자치도
+","함경북도","함경남도","평안북도","평안남도","황해도");
+$html = "<SELECT name=\"prefecture\">\n";
+for($i=0;$i<=count($PrefectureList)-1;$i++){
+    $html .="<OPTION value=\"$i\">$PrefectureList[$i]</OPTION>\n";
+}
+$html .="</SELECT>\n";
+print$html;
+?>
+
+#foreach.php
+##수정필요(리눅스실습프로젝트 4주차 마지막 예제)
+<?php
+$member=arry("name"=>" ChurSu","age"=>20,"tall"=>170);
+foreach($member as $key=>$value){
+    if($key=="name"){$title="이름";}
+    Else{if($key=="age"){$title="연령";}
+Else{if($key=="tall"){$title="신장}"}}
+}
+print "$title : $value";print"<BR>"}
+?>
