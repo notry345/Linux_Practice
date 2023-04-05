@@ -49,3 +49,13 @@ print $member["age"];
 print "<BR>";
 print $member["tall"];
 ?>
+
+#Asoarray4.php
+<?php
+$member[] = array("name"=>" ChurSu","age"=>20,"tall"=>170);
+print $member[0]["name"];
+print "<BR>";
+print $member[0]["age"];
+print "<BR>";
+print $member[0]["tall"];
+?>
