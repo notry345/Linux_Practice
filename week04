@@ -59,3 +59,54 @@ print $member[0]["age"];
 print "<BR>";
 print $member[0]["tall"];
 ?>
+
+#Operator1.php
+<?php
+$answer=5+1;
+print"5 + 1 = $answer";
+print "<BR>";
+$answer=5-2;
+print"5 - 2 = $answer";
+print "<BR>";
+$answer=5*3;
+print"5 * 3 = $answer";
+print "<BR>";
+$answer=5/5;
+print"5 / 5 = $answer";
+print "<BR>";
+$answer=5%3;
+print"5 % 1 = $answer";
+print "<BR>";?>
+
+#Operator2.php
+<?php
+$filelist = 'dir';
+print"<PRE>";
+print $filelist;
+print"</PRE>";
+?>
+
+#Operator3.php
+<?php
+$count=0;
+print $count++;
+print"<BR>";
+print $count;
+print"<BR>";
+$count=3;
+print $count--;
+print"<BR>";
+print$count;
+print"<BR>"
+?>
+
+#Operator4.php
+<?php
+$data1=array("name"=>" ChurSu","age"=>20);
+$data2=array("name"=>" YoungHyi","tall"=>180,"age"=>30);
+$data = $data1+$data2;
+print"<PRE>";
+var_dump($data);
+print"</PRE>";
+?>
+
