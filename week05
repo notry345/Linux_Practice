@@ -1,0 +1,191 @@
+#foreach.php
+<?php
+$member = array("name"=>"Kim Ewha","age"=>21,"tall"=>172);
+foreach($member as $key=>$value){
+    if($key=="name"){$title="이름";}
+    Else{
+        if($key=="age"){$title="연령";}
+    Else{
+        if($key=="tall"){$title="신장";}
+    }}
+print "$title : $value"; print"<BR>";}
+?>
+
+#break.php
+<?php
+$member[0]="보라돌이";
+$member[1]="뚜비";
+$member[2]="나나";
+$member[3]="또오";
+$member[4]="토비";
+$i=1; $limit=3;
+foreach($member as $key => $value){
+    if($i>$limit){
+        print "Exiting loop.<BR>"; break;
+    }
+    print "name : $value"; print "<BR>"; $i++;
+}
+?>
+
+#continue.php
+<?php
+$member = array("name"=>" James","tel"=>"03-0000-0000","age"=>21,"tall"=>183);
+foreach($member as $key => $value){
+    if($key=="name"){$title="name";}
+    Else{if($key=="age"){$title="age";}
+Else{if($key=="tall"){$title="tall";}
+Else{print "Skipped processing.<BR>"; continue;}}}
+print "$title : $value"; print "<BR>";}
+?>
+
+#function.php
+<?php
+function print_copyright(){
+    print "<FONT size=2>";
+    print "Copyright 2013 Kim Yunju All rights reserved.";
+    print "</FONT>";
+}
+print_copyright();
+?>
+
+#arg1.php
+<?php
+$myage=21;
+check_adult($myage);
+function check_adult($age){
+    $adult_age = 20;
+    $adult_check = ($adult_age<=$age)?"adult":"minor";
+    print $adult_check."입니다.";
+}
+?>
+
+#arg2.php
+<?php
+check_member();
+function check_member($username="guest",$password="guest"){
+    if($username=="guest"&&$password=="guest"){
+        print "Welcome, guest!";}
+    Else{ print "Welcome, member!";}
+}
+?>
+
+#return1.php
+<?php
+$str = "abcdefghijklemnop";
+$byte = 16;
+$flag = checkByte($str,$byte);
+if($flag){print "It's OK.";}
+Else{print "Error. "; print $byte; print " Exceeded byte.";}
+function checkByte($str,$byte){
+    $strlen = strlen($str);
+    if($strlen<=$byte){return true;}
+    return false;
+}
+?>
+
+#return2.php
+<?php
+list($year,$month,$day)=get_today();
+print $year.'년'.$month.'월'.$day.'일';
+function get_today(){
+    $year=date('Y');
+    $month=date('m');
+    $day=date('d');
+    return array($year,$month,$day);
+}
+?>
+
+#global.php
+<?php
+$data = 5;
+function scope_test(){
+    $data = 1; print $data; print "<BR>";
+}
+print $data; print "<BR>"; scope_test(); print $data;
+print "<BR>";
+?>
+
+#addslashes.php
+<?php
+$string = '"apple","orange","gam","bam"';
+$result = addslashes($string);
+print $result;
+?>
+
+#explode.php
+<?php
+$string = "apple,orange,gam,bam";
+$array = explode(',',$string); print "<PRE>";
+print_r($array); print "</PRE>";
+?>
+
+#htmlspecialchars.php
+<?php
+$string='<a href="http://www.ewha.ac.kr/">Ewha Womens University</a>';
+$result=htmlspecialchars($string,ENT_QUOTES); print $result;
+?>
+
+#implode.php
+<?php
+$data = array("apple","orange","gam","bam");
+$result = implode(',',$data);
+print $result;
+?>
+
+#nl2br.php
+<?php
+$string="Fuction of PHP is really useful.";
+$result = nl2br($string);
+print $result;
+?>
+
+#str_replace.php
+<?php
+$html = '<FONT size="3"Hello!</FONT><BR>';
+$search = 'size="3"'; $replace = 'size="5"';
+$result = str_replace($search,$replace,$html);
+print $html.$search.$replace.$result;
+?>
+
+#substr.php
+<?php
+$string = "ABCDEFGHIJKLMN";
+$result = substr($string,3,5);
+print $result;
+?>
+
+#trim.php
+<?php
+$string = " 1234567890 ";
+$result = trim($string);
+print $result;
+?>
+
+#array_merge.php
+<?php
+$data=array("TV1"=>"500","TV2"=>"1000","RADIO1"=>"800");
+$add_data=array("TV1"=>"2000","RADIO2"=>"600");
+$result=array_merge($data,$add_data); print "<PRE>";
+print_r($result); print "</PRE>";
+?>
+
+#array_pop.php
+<?php
+$data=array("apple","orange","gam");
+$kaki=array_pop($data); print "<PRE>";
+print_r($data); print "</PRE>"; print $kaki;
+?>
+
+#array_push.php
+<?php
+$data=array("apple","orange","gam");
+array_push($data,"no data","watermelon"); print "<PRE>";
+print_r($data); print "</PRE>";
+?>
+
+#array_reverse.php
+<?php
+$data = array("A","B","C","D","E");
+$result = array_reverse($data);
+print "<PRE>"; print_r($result); print "</PRE>";
+?>
