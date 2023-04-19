@@ -1,0 +1,11 @@
+#function.php
+
+<?php
+function print_copyright(){
+    print "<FONT size=2>";
+    print "Copyright 2013 Kim Yunju All rights reserved.";
+    print "</FONT>";
+}
+print_copyright();
+?>
+
