@@ -1,5 +1,4 @@
 #function.php
-
 <?php
 function print_copyright(){
     print "<FONT size=2>";
@@ -9,3 +8,204 @@ function print_copyright(){
 print_copyright();
 ?>
 
+#arg1.php
+<?php
+$myage = 21;
+check_adult($myage);
+function check_adult($age){
+    $adult_age = 20;
+    $adult_check = ($adult_age <= $age? "어른":"아이");
+    print $adult_check."입니다.";
+}
+?>
+
+#arg2.php
+<?php
+check_member();
+function check_member($username = "guest", $password = "guest"){
+    if($username == "guest" && $password == "guest"){
+        print "게스트님 환영합니다!";
+    }
+    else{
+        print "회원님 환영합니다!";
+    }
+}
+?>
+
+#return1.php
+<?php
+$str = "abcdefghijklemnop";
+$byte = 16;
+$flag = checkByte($str, $byte);
+if($flag){
+    print "OK입니다.";
+}
+else{
+    print "오류입니다.";
+    print $byte;
+    print "Byte를 초과하였습니다.";
+}
+function checkByte($str, $byte){
+    $strlen = strlen($str);
+    if($strlen <= $byte){
+        return true;
+    }
+    return false;
+}
+?>
+
+#return2.php
+<?php
+list($year, $month, $day) = get_today();
+print $year.'년'.$month.'월'.$day.'일';
+function get_today(){
+    $year = date('Y');
+    $month = date('m');
+    $day = date('d');
+    return array($year, $month, $day);
+}
+?>
+
+#global.php
+<?php
+$data = 5;
+function scope_test(){
+    $data = 1;
+    print $data;
+    print "<BR>";
+}
+print $data;
+print "<BR>";
+scope_test();
+print $data;
+print "<BR>";
+?>
+
+#addslashes.php
+<?php
+$string = '"사과","귤","감","밤"';
+$result = addslashes($string);
+print $result;
+?>
+
+#explode.php
+<?php
+$string = "사과,귤,감,밤";
+$array = explode(',', $string);
+print "<PRE>";
+print_r($array);
+print "</PRE>";
+?>
+
+#htmlspecialchars.php
+<?php
+$string = '<a href="http://www.ewha.ac.kr/">이화여대</a>';
+$result = htmlspecialchars($string, ENT_QUOTES);
+print $result;
+?>
+
+#implode.php
+<?php
+$data = array("사과","귤","감","밤");
+$result = implode(',', $data);
+print $result;
+?>
+
+#nl2br.php
+<?php
+$string = "PHP의 함수는 정말 편리합니다.";
+$result = nl2br($string);
+print $result;
+?>
+
+#str_replace.php
+<?php
+$html = '<FONT size="3">Hello!</FONT><BR>';
+$search = 'size="3"';
+$replace = 'size="5"';
+$result = str_replace($search, $replace, $html);
+print $result;
+?>
+
+#substr.php
+<?php
+$string= "ABCEDFGHIJKLMN";
+$result = substr($string,3,5);
+print $result;
+?>
+
+#trim.php
+<?php
+$string = " 1234567890 ";
+$result = trim($string);
+print $result
+?>
+
+#array_merge.php
+<?php
+$data = array("TV1"=>"500", "TV2"=>"1000", "RADIO1"=>"800");
+$add_data = array("TV1"=>"2000", "RADIO2"=>"600");
+$result = array_merge($data, $add_data);
+print "<PRE>"; print_r($result); print "</PRE>";
+?>
+
+#array_pop.php
+<?php
+$data = array("사과","귤","감");
+$kaki = array_pop($data);
+print "<PRE>"; print_r($data); print "</PRE>";
+print $kaki;
+?>
+
+#array_push.php
+<?php
+$data = array("사과","귤","감");
+array_push($data,"없음","수박");
+print "<PRE>"; print_r($data); print "</PRE>";
+?>
+
+#array_reverse.php
+<?php
+$data = array("A","B","C","D","E");
+$result = array_reverse($data);
+print "<PRE>"; print_r($result); print "</PRE>";
+?>
+
+#array_shift.php
+<?php
+$data = array("사과","귤","감");
+$apple = array_shift($data);
+print "<PRE>"; print_r($data); print "</PRE>";
+print $apple;
+?>
+
+#array_unshift.php
+<?php
+$data = array("사과","귤","감");
+array_unshift($data,"파파야","키위");
+print "<PRE>"; print_r($data); print "</PRE>";
+?>
+
+#arsort.php
+<?php
+$sales = array("TV2"=>"1000","TV1"=>"500","RADIO1"=>"800");
+arsort($sales);
+print "<PRE>"; print_r($sales); print "</PRE>";
+?>
+
+#list.php
+<?php
+$data = array("사과","귤","감");
+list($fruit0,$fruit1,$fruit2) = $data;
+$fruit0 = $data[0];
+$fruit1 = $data[1];
+$fruit2 = $data[2];
+?>
+
+#checkdate.php
+<?php
+$month=2; $day=31; $year=2014;
+if(!checkdate($month, $day, $year)){
+    print "올바른 날짜를 입력하세요.";
+}
+?>
