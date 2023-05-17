@@ -1,0 +1,17 @@
+### Visual Studio Code랑 Xampp 다운로드
+### Xampp에서 Apache,MySQL 모듈 실행
+### cmd 열기
+cd..
+cd..
+cd xampp
+cd mysql
+cd bin
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:(엔터 두 번)
+MariaDB [(none)]>create database sampledb; //sampledb라는 이름을 가진 database 생성
+MariaDB [(none)]>show databases; //생성된 database 확인
+### VScode에서 (파일이름).php 만들고 코드 적기
+### 예제에서 'sample'-->'root'로, 'password'-->''로 변경
+### 파일 저장 경로 = C:\xampp\htdocs
+### chrome 브라우저 창에 http://localhost/(파일이름).php
+
